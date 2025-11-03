@@ -1,0 +1,22 @@
+﻿@model DisasterAlleviationApp.Models.User
+
+<h2>Login</h2>
+
+<form asp-action="Login" method="post">
+    <div>
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" placeholder="Enter full name" />
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" placeholder="Enter password" />
+    </div>
+    <button type="submit">Login</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color:green">@ViewBag.Message</p>
+}
+
+<p>Don't have an account? <a asp-action="Register" asp-controller="User">Register here</a></p>

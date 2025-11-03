@@ -1,0 +1,28 @@
+﻿@model DisasterAlleviationApp.Models.IncidentReport
+
+<h2>Report Disaster</h2>
+
+<form asp-action="Report" method="post">
+    <div>
+        <label asp-for="ReporterName"></label>
+        <input asp-for="ReporterName" placeholder="Your Name" />
+    </div>
+    <div>
+        <label asp-for="DisasterType"></label>
+        <input asp-for="DisasterType" placeholder="Type of Disaster" />
+    </div>
+    <div>
+        <label asp-for="Location"></label>
+        <input asp-for="Location" placeholder="Location" />
+    </div>
+    <div>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" placeholder="Describe the disaster"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color:green">@ViewBag.Message</p>
+}

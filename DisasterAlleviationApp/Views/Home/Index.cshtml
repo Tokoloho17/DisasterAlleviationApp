@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center mb-5">
+    <h2>Welcome to the Gift Of The Givers Foundation</h2>
+    <p class="lead">Helping communities recover from disasters. Join us in making a difference.</p>
+</div>
+
+<div class="row">
+    <!-- Report Disaster Card -->
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">Report Disaster</div>
+            <div class="card-body">
+                <p>Submit details of a disaster in your area to help us respond quickly.</p>
+                <a asp-controller="Disaster" asp-action="Report" class="btn btn-custom">Report Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Donate Card -->
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">Donate Resources</div>
+            <div class="card-body">
+                <p>Provide food, clothes, or medical supplies to help affected communities.</p>
+                <a asp-controller="Donation" asp-action="Create" class="btn btn-custom">Donate</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Volunteer Card -->
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">Volunteer</div>
+            <div class="card-body">
+                <p>Join our team of volunteers and make a real impact on the ground.</p>
+                <a asp-controller="Volunteer" asp-action="Register" class="btn btn-custom">Join Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5 text-center">
+    <h3>Why Choose Us?</h3>
+    <p>We coordinate disaster relief efficiently, transparently, and with compassion.</p>
+</div>
